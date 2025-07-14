@@ -1,0 +1,49 @@
+# Features
+DETECT_ON_SELECTED_REGION : 1                         # perform detection only on selected region
+SHOW_CLASSES : 0                                      # show classes in labels
+SHOW_SCORES : 0                                       # show confidence in labels
+SHOW_TRAILS : 1                                       # show trails of the objects
+SHOW_KEY_INFO : 1                                     # show id and corresponding speed of the objects
+WAIT_FOR_BREAK_LINE : 1                               # show future estimations and key info when each object has reached a certain line 
+LIMIT_OT_CAPACITY : 0                                 # limit number of objects being tracked below max_ot_capacity
+PRINT_TIME_INTERVALS : 0                              # print information on time duration of events
+PRINT_CALCULATIONS : 0                                # print information on calculations
+SHOW_VIDEO: 1                                         # show the annotated video
+SAVE_VIDEO: 0                                         # save the annotated video
+SHOW_TRACKING_PERFORMANCE: 0                          # show YOLO tracking times
+SAVE_TRACKING_PERFORMANCE: 0                          # save YOLO tracking times
+
+# Image or video input
+IMAGE_PATH : 'evaluation_data/sample_image.png'
+VIDEO_PATH : 'evaluation_data/conveyor_sample_video.mp4'
+
+# Object tracking parameters
+MODEL_PATH : 'models/medium/best.pt'
+CLASSES :
+  0: 'Chocolate'
+CONFIDENCE_THRESHOLD : 0.6
+IOU_THRESHOLD : 0.05
+
+# Motion analysis parameters
+MINIMUM_MOVEMENT: 3                                   # [pixels] minimum movement which can be perceived as a moving object by object detection
+MINIMUM_SPEED : 0.010                                 # [meters/second] minimum speed to be considered as a moving object
+NUMBER_OF_TERMS : 8                                   # terms used to define weighted average of speeds
+FUTURE_TIME : 1                                       # [seconds] after current time by which the object's path is plotted
+PAST_TIME : 1                                         # [seconds] before current time by which the object's trail is plotted
+MAX_OT_CAPACITY : 10                                  # maximum number of objects being tracked over time
+
+# Styling
+SELECTED_REGION_CORNERS:
+  'CONVEYOR_1280x720' : [[83, 88], [1132, 595]]       # [pixel] coordinates of shown conveyor in given resolution
+SELECTED_REGION_DIMENSIONS:
+  'CONVEYOR_1280x720' : [2.07, 1]                     # [meters] length and width of shown conveyor in given resolution
+SELECTED_REGION_COLOR : [200, 100, 0]                 # [BGR values] of selected region's frame
+KEY_INFO : [[22.5, 22.5], [485, 45]]                  # [pixel] initial coordinates of key information
+KEY_INFO_COLOR : [200, 100, 50]                       # [BGR values] of key information
+KEY_INFO_TRANSPARENCY : 0.25                          # [0, 1] of key information transparency
+FUTURE_BOX_COLOR : [[100, 50, 200]]                   # [BGR values] of boxes after future time
+TEXTS_COLOR : [30, 30, 30]                            # [BGR values] of texts
+DOTS_SPACING : 0.05                                   # [meters]
+DOTS_COLOR : [50, 200, 200]                           # [BGR values] of dots
+LINES_COLOR : [50, 200, 200]                          # [BGR values] of lines
+OUTPUT_RESOLUTION : [1280, 720]                       # [pixel] dimensions of output 
