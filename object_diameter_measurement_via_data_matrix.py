@@ -7,7 +7,7 @@ from pylibdmtx import pylibdmtx
 import matplotlib.pyplot as plt
 
 
-data_matrix_image_path = ("/data_matrix.png")
+data_matrix_image_path = "/data_matrix.png"
 image_dir_path = "/object_size_measurement/object detection images"
 table_input_path = "/object_size_measurement/objects_predicted_true_measurement_table.txt"
 table_output_path = "/object_size_measurement/objects_predicted_measurement_table.txt"
