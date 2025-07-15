@@ -18,3 +18,6 @@
 - (optional) Also select object tracking, motion analysis and styling parameters.
 - Run 'object_future_position_estimation.py'.
 - (optional) Pause with 'p','P' or ' ' and quit with 'q','Q' or Esc character.
+# Object diameter measurement on images via data matrix
+- Open 'object_diameter_measurement_via_data_matrix.py' and write the proper paths for input and output.
+- Run 'object_diameter_measurement_via_data_matrix.py'.
